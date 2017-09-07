@@ -10,7 +10,7 @@ source:
   sha256: 9a1085ec093e35cc724da4ebff0092558489e089dd128d222ff81c9115f91bb1
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record record.txt
   entry_points:
     - glue = glue.main:main
