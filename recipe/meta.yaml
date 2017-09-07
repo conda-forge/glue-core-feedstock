@@ -24,6 +24,7 @@ requirements:
     - python
     - setuptools
     - pyqt 4.11.*|5.6.*
+    - icu 58.*
 
   run:
 
@@ -46,7 +47,7 @@ requirements:
     - h5py >=2.4
     - setuptools >=1.0
     - pyqt 4.11.*|5.6.*
-
+    - icu 58.*
 
     # Optional dependencies (defined in ``extras_require``)
     - scipy
