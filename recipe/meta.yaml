@@ -7,7 +7,7 @@ package:
 source:
   fn: glue-core-{{version}}.tar.gz
   url: https://pypi.io/packages/source/g/glue-core/glue-core-{{version}}.tar.gz
-  sha256: 9a1085ec093e35cc724da4ebff0092558489e089dd128d222ff81c9115f91bb1
+  sha256: db871285e9fe4ff0092d6803d573daa953ec9864b9128cd027cee97b2573e557
 
 build:
   number: 0
