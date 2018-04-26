@@ -14,14 +14,16 @@ Summary: Multi-dimensional linked data exploration
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/glue-core-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/glue-core-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/glue-core-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/glue-core-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/glue-core-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/glue-core-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/glue-core-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/glue-core-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/glue-core-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/glue-core-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/glue-core-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/glue-core-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/glue-core/badges/version.svg)](https://anaconda.org/conda-forge/glue-core)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/glue-core/badges/downloads.svg)](https://anaconda.org/conda-forge/glue-core)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-glue--core-green.svg)](https://anaconda.org/conda-forge/glue-core) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/glue-core.svg)](https://anaconda.org/conda-forge/glue-core) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/glue-core.svg)](https://anaconda.org/conda-forge/glue-core) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/glue-core.svg)](https://anaconda.org/conda-forge/glue-core) |
 
 Installing glue-core
 ====================
