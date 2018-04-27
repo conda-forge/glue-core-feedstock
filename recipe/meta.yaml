@@ -1,4 +1,4 @@
-{% set version = "0.12.5" %}
+{% set version = "0.13.0" %}
 
 package:
   name: glue-core
@@ -7,7 +7,7 @@ package:
 source:
   fn: glue-core-{{version}}.tar.gz
   url: https://pypi.io/packages/source/g/glue-core/glue-core-{{version}}.tar.gz
-  sha256: b2742bc474859df66329e3885a2f0a2db01d4c8ae5e772271c755a30eb576cfe
+  sha256: c5d8b83a3c41213ae0eb908c55c798e4c66b8171c661e91343e54dc64dbe6508
 
 build:
   number: 0
