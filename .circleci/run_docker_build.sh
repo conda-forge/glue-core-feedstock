@@ -64,7 +64,7 @@ source run_conda_forge_build_setup
 # "recipe/yum_requirements.txt" file. After updating that file,
 # run "conda smithy rerender" and this line be updated
 # automatically.
-/usr/bin/sudo -n yum install -y gtk2-devel
+/usr/bin/sudo -n yum install -y xorg-x11-server-Xvfb gtk2-devel
 
 
 conda build /home/conda/recipe_root -m /home/conda/feedstock_root/.ci_support/${CONFIG}.yaml --quiet || exit 1
