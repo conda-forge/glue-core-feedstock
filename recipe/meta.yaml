@@ -1,4 +1,4 @@
-{% set version = "0.13.3" %}
+{% set version = "0.13.4" %}
 
 package:
   name: glue-core
@@ -8,7 +8,7 @@ source:
 
   fn: glue-core-{{version}}.tar.gz
   url: https://pypi.io/packages/source/g/glue-core/glue-core-{{version}}.tar.gz
-  sha256: da4e3e9c18366c81effb37cbe281fdaa4899e8acb01c47ac0f0f4d5d156677e9
+  sha256: 9a91674c769cd50e778c8e0ca566d3f1ef760d6dc330411eaae4e1a5a5d85e52
 
   # The default setup.py includes a hard-coded check that PyQt is present but
   # since we don't want to list it as a build-time dependency (since conda then
