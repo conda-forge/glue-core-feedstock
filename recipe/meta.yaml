@@ -10,12 +10,6 @@ source:
   url: https://pypi.io/packages/source/g/glue-core/glue-core-{{version}}.tar.gz
   sha256: 3c8e93497ea6f65bb44aefcfe3ffc330b7496a9f275b0c47b0ab38f2dbf8b6ff
 
-  # The default setup.py includes a hard-coded check that PyQt is present but
-  # since we don't want to list it as a build-time dependency (since conda then
-  # restricts the versions too much)
-  patches:
-    - disable_qt_check.patch
-
 build:
   number: 0
   script: python -m pip install --no-deps --ignore-installed .
@@ -30,8 +24,11 @@ requirements:
   build:
     - python
     - pip
+    # We need to include PyQt5 here to make sure that PyQt5 doesn't
+    # get included in install_requires
+    - pyqt >=5.6
 
-  run:
+run:
 
     # The following is needed to make sure that the package works as a GUI
     # application (glue needs to be run with python.app, not python)
