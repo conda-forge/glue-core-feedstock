@@ -28,7 +28,7 @@ requirements:
     # get included in install_requires
     - pyqt >=5.6
 
-run:
+  run:
 
     # The following is needed to make sure that the package works as a GUI
     # application (glue needs to be run with python.app, not python)
