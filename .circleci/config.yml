@@ -18,7 +18,8 @@ jobs:
       - run:
           # Run, test and (if we have a BINSTAR_TOKEN) upload the distributions.
           command: ./.circleci/run_docker_build.sh
-  build_linux_python3.6:
+          no_output_timeout: 60m
+build_linux_python3.6:
     working_directory: ~/test
     machine: true
     environment:
@@ -35,6 +36,7 @@ jobs:
       - run:
           # Run, test and (if we have a BINSTAR_TOKEN) upload the distributions.
           command: ./.circleci/run_docker_build.sh
+          no_output_timeout: 60m
   build_linux_python3.7:
     working_directory: ~/test
     machine: true
@@ -52,6 +54,7 @@ jobs:
       - run:
           # Run, test and (if we have a BINSTAR_TOKEN) upload the distributions.
           command: ./.circleci/run_docker_build.sh
+          no_output_timeout: 60m
 
 workflows:
   version: 2
