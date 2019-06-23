@@ -1,4 +1,4 @@
-{% set version = "0.14.2" %}
+{% set version = "0.15.0" %}
 
 package:
   name: glue-core
@@ -8,11 +8,11 @@ source:
 
   fn: glue-core-{{version}}.tar.gz
   url: https://pypi.io/packages/source/g/glue-core/glue-core-{{version}}.tar.gz
-  sha256: 25e679a789ebc9d745ccb4cce75077763bd77fa92b8895b57c9c1ef23f4b969e
+  sha256: b0ac8d8e39ae7c598f5701e22f5e0bf8dcff99af751ada081a4683b01e8caf23
 
 build:
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - glue = glue.main:main
     - glue-config = glue.config_gen:main
@@ -22,11 +22,11 @@ build:
 requirements:
 
   build:
+
     - python
     - pip
-    # We need to include PyQt5 here to make sure that PyQt5 doesn't
-    # get included in install_requires
-    - pyqt >=5.6
+    - setuptools >=30.3
+    - setuptools_scm
 
   run:
 
@@ -37,25 +37,24 @@ requirements:
     # Required dependencies
     - python
     - numpy >=1.9
+    - matplotlib >=2.1
+    - scipy >=1.0
     - pandas >=0.14
     - astropy >=2.0
-    - matplotlib >=2.0
+    - setuptools >=1.0
     - qtpy >=1.2
     - ipython >=4.0
-    - ipykernel
+    - ipykernel >=4.0,!=5.0.0,!=5.1.0
     - qtconsole
     - dill >=0.2
     - xlrd >=1.0
     - h5py >=2.4
-    - bottleneck >=1.2
     - mpl-scatter-density >=0.4
-    - setuptools >=1.0
-    - pyqt 5.6.*
+    - bottleneck >=1.2
+    - pyqt
 
     # Optional dependencies (defined in ``extras_require``)
-    - scipy
     - scikit-image
-    - plotly
 
     # Temporary: the scikit-image conda package is missing the dask dependency
     # so we add it here for now
