@@ -22,11 +22,11 @@ build:
 requirements:
 
   build:
+
     - python
     - pip
-    # We need to include PyQt5 here to make sure that PyQt5 doesn't
-    # get included in install_requires
-    - pyqt
+    - setuptools >=30.3
+    - setuptools_scm
 
   run:
 
