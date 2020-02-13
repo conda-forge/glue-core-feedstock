@@ -11,7 +11,7 @@ source:
   sha256: f9c753f13de918671c0fcab680404390b2e133c5e85c7248e4d279e8b29ec266
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - glue = glue.main:main
@@ -37,7 +37,7 @@ requirements:
     # Required dependencies
     - python
     - numpy >=1.9
-    - matplotlib >=2.1
+    - matplotlib-base >=2.1
     - scipy >=1.0
     - pandas >=0.14
     - astropy >=2.0
