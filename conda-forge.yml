@@ -10,3 +10,4 @@ max_r_ver: '35'
 idle_timeout_minutes: 60
 provider:
   win: azure
+conda_forge_output_validation: true
