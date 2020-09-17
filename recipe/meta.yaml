@@ -1,23 +1,23 @@
-{% set version = "0.15.6" %}
+{% set version = "1.0.0" %}
 
 package:
   name: glue-core
-  version: {{version}}
+  version: {{ version }}
 
 source:
 
-  fn: glue-core-{{version}}.tar.gz
-  url: https://pypi.io/packages/source/g/glue-core/glue-core-{{version}}.tar.gz
-  sha256: f9c753f13de918671c0fcab680404390b2e133c5e85c7248e4d279e8b29ec266
+  fn: glue-core-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/g/glue-core/glue-core-{{ version }}.tar.gz
+  sha256: cfe89fb7742782e859fefd6b925fb0e5cba8aec0321b0e5fd8d0517d99ee9ae1
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - glue = glue.main:main
     - glue-config = glue.config_gen:main
     - glue-deps = glue._deps:main
-  osx_is_app: True
+  osx_is_app: true
 
 requirements:
 
