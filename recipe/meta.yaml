@@ -18,12 +18,13 @@ build:
     - glue-config = glue.config_gen:main
     - glue-deps = glue._deps:main
   osx_is_app: true
-
+  skip: true  # [py<37]
+  
 requirements:
 
   host:
 
-    - python >=3.7
+    - python
     - pip
     - setuptools >=30.3
     - setuptools_scm
@@ -35,7 +36,7 @@ requirements:
     - python.app  # [osx]
 
     # Required dependencies
-    - python >=3.7
+    - python
     - numpy >=1.16
     - matplotlib-base >=3.2
     - scipy >=1.0
@@ -75,7 +76,7 @@ test:
 
 about:
   home: http://glueviz.org
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_file: LICENSE
   summary: Multi-dimensional linked data exploration
 
