@@ -240,4 +240,5 @@ Feedstock Maintainers
 =====================
 
 * [@astrofrog-conda-forge](https://github.com/astrofrog-conda-forge/)
+* [@izahn](https://github.com/izahn/)
 
