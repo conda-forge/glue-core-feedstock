@@ -1,4 +1,4 @@
-{% set version = "1.2.4" %}
+{% set version = "1.3.0" %}
 
 package:
   name: glue-core
@@ -8,10 +8,10 @@ source:
 
   fn: glue-core-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/g/glue-core/glue-core-{{ version }}.tar.gz
-  sha256: e8747b5a4f98241d707a5d6ba7498033d0c450130cc1f6074a0cc9ef6de12853
+  sha256: 70a6114f77f5f458905ee921e94f4ef11f760bfcd6c97f6f17e7d623bf056b68
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - glue = glue.main:main
@@ -23,7 +23,6 @@ build:
 requirements:
 
   host:
-
     - python
     - pip
     - setuptools >=30.3
@@ -36,26 +35,24 @@ requirements:
     - python.app  # [osx]
 
     # Required dependencies
-    - python
-    - numpy >=1.17
-    - matplotlib-base >=3.2
-    - scipy >=1.1
-    - pandas >=1.2
-    - echo >=0.5
     - astropy >=4.0
-    - setuptools >=30.3
-    - qtpy >=1.9
-    - ipython >=4.0
-    - ipykernel >=4.0,!=5.0.0,!=5.1.0
-    - qtconsole >=4.3
-    - jupyter_client <7
-    - dill >=0.2
-    - xlrd >=1.2
-    - openpyxl >=3.0
-    - h5py >=2.10
-    - mpl-scatter-density >=0.7
     - bottleneck >=1.3
+    - dill >=0.2
+    - echo >=0.5
+    - h5py >=2.10
+    - ipykernel >=4.0,!=5.0.0,!=5.1.0
+    - ipython >=4.0
+    - matplotlib-base >=3.2
+    - mpl-scatter-density >=0.7
+    - numpy >=1.17
+    - pandas >=1.2
     - pyqt
+    - python
+    - qtconsole >=4.3
+    - qtpy >=1.9
+    - scipy >=1.1
+    - setuptools >=30.3
+    - xlrd >=1.2
 
     # Optional dependencies (defined in ``extras_require``)
     - scikit-image
@@ -63,7 +60,7 @@ requirements:
     # Temporary: the scikit-image conda package is missing the dask dependency
     # so we add it here for now
     - dask
-
+    
 test:
   imports:
     - glue
@@ -85,3 +82,4 @@ about:
 extra:
   recipe-maintainers:
     - astrofrog-conda-forge
+    - izahn
