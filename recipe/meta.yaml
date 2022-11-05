@@ -11,7 +11,7 @@ source:
   sha256: 1a0ec533523a51d3514a045a24ea75248281ef2b27b02adcac5ed983f552da7a
 
 build:
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - glue = glue.main:main
