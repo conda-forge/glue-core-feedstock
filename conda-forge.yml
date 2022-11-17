@@ -8,3 +8,5 @@ idle_timeout_minutes: 60
 provider:
   win: azure
 test: native_and_emulated
+conda_build:
+  pkg_format: '2'
