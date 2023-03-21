@@ -1,11 +1,11 @@
-About glue-core
-===============
+About glue-core-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/glue-core-feedstock/blob/main/LICENSE.txt)
 
 Home: http://glueviz.org
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/glue-core-feedstock/blob/main/LICENSE.txt)
 
 Summary: Multi-dimensional linked data exploration
 
