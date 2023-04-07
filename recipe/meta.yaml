@@ -40,7 +40,7 @@ requirements:
     - astropy >=4.0
     - bottleneck >=1.3
     - dill >=0.2
-    - echo >=0.5
+    - echo >=0.6
     - h5py >=2.10
     - ipykernel >=4.0,!=5.0.0,!=5.1.0
     - ipython >=4.0
@@ -48,6 +48,8 @@ requirements:
     - mpl-scatter-density >=0.7
     - numpy >=1.17
     - pandas >=1.2
+    - openpyxl >=3.0
+    - pvextractor >=0.2
     - pyqt
     - python
     - qtconsole >=4.3
@@ -64,6 +66,8 @@ requirements:
     - dask
 
 test:
+  requires:
+    - pip
   imports:
     - glue
     - glue.core
@@ -71,6 +75,7 @@ test:
   commands:
     - glue --version
     - glue-deps list
+    - pip check
 
 # NOTE: we deliberatey do NOT include an app entry here, because we instead do this
 # in the glueviz meta-package (we don't want glue to appear twice in the navigator)
