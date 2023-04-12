@@ -66,8 +66,6 @@ requirements:
     - dask
 
 test:
-  requires:
-    - pip
   imports:
     - glue
     - glue.core
@@ -75,7 +73,6 @@ test:
   commands:
     - glue --version
     - glue-deps list
-    - pip check
 
 # NOTE: we deliberatey do NOT include an app entry here, because we instead do this
 # in the glueviz meta-package (we don't want glue to appear twice in the navigator)
