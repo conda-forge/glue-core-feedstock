@@ -11,7 +11,7 @@ source:
   sha256: 0181fe5f021a83dbb7f6aebd7647a8381f0030386169724ac8799651f8886e0e
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - glue = glue.main:main
@@ -40,7 +40,7 @@ requirements:
     - astropy >=4.0
     - bottleneck >=1.3
     - dill >=0.2
-    - echo >=0.5
+    - echo >=0.6
     - h5py >=2.10
     - ipykernel >=4.0,!=5.0.0,!=5.1.0
     - ipython >=4.0
@@ -48,6 +48,8 @@ requirements:
     - mpl-scatter-density >=0.7
     - numpy >=1.17
     - pandas >=1.2
+    - openpyxl >=3.0
+    - pvextractor >=0.2
     - pyqt
     - python
     - qtconsole >=4.3
