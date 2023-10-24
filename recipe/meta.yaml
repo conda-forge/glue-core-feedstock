@@ -1,4 +1,4 @@
-{% set version = "1.13.1" %}
+{% set version = "1.14.0" %}
 
 package:
   name: glue-core
@@ -8,7 +8,7 @@ source:
 
   fn: glue-core-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/g/glue-core/glue-core-{{ version }}.tar.gz
-  sha256: 0fd5d5a9370dc505eb9c47fa9495443c28c55681a425f9ad027c600e7d6579c0
+  sha256: 72b5ee83afcc859deaa4b270808a613d04b3ede426e4b5a35074645ee03393b2
 
 build:
   number: 0
@@ -36,6 +36,7 @@ requirements:
     - scipy >=1.1
     - setuptools >=30.3
     - xlrd >=1.2
+    - shapely >=2.0
 
     # Optional dependencies (defined in ``extras_require``)
     - scikit-image
