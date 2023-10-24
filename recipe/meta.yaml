@@ -36,6 +36,7 @@ requirements:
     - scipy >=1.1
     - setuptools >=30.3
     - xlrd >=1.2
+    - shapely >=2.0
 
     # Optional dependencies (defined in ``extras_require``)
     - scikit-image
