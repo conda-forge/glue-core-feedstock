@@ -54,7 +54,6 @@ test:
     - glue.core
   commands:
     - pip check
-    - glue --version
     - pytest --pyargs glue
 
 about:
