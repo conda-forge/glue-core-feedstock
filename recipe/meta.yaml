@@ -1,59 +1,62 @@
-{% set version = "1.17.1" %}
+{% set name = "glue-core" %}
+{% set version = "1.21.0" %}
 
 package:
-  name: glue-core
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-
-  fn: glue-core-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/g/glue-core/glue-core-{{ version }}.tar.gz
-  sha256: 5e894e7896cec315521f148e1d8b4c13a1fd0ddf5a1b5790c4c3ae27db0de2bd
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/glue_core-{{ version }}.tar.gz
+  sha256: d730bcd483eadf58cb566199a2012a95714075fb522077a1ea0420ef388cd45b
 
 build:
-  number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  skip: true  # [py<38]
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   noarch: python
+  number: 0
 
 requirements:
   host:
-    - python >=3.8
+    - python
+    - setuptools
+    - setuptools-scm
+    - wheel
     - pip
-    - setuptools >=30.3
-    - setuptools_scm
   run:
-    - python >=3.8
-    - astropy >=4.0
-    - dill >=0.2
-    - echo >=0.6
-    - glue-qt >=0.1
-    - h5py >=2.10
-    - matplotlib-base >=3.2
-    - mpl-scatter-density >=0.7
+    - python
     - numpy >=1.17
-    - pandas >=1.2
-    - openpyxl >=3.0
+    - matplotlib-base >=3.2
     - scipy >=1.1
-    - setuptools >=30.3
+    - pandas >=1.2
+    - echo >=0.6
+    - astropy >=4.0
+    - fast-histogram >=0.12
+    - setuptools >=30.3.0
+    - ipython >=4.0
+    - dill >=0.2
+    - h5py >=2.10
     - xlrd >=1.2
+    - openpyxl >=3.0
+    - mpl-scatter-density >=0.7
+    - pvextractor >=0.2
+    - importlib-resources >=1.3  # [py<39]
+    - importlib-metadata >=3.6  # [py<310]
     - shapely >=2.0
 
     # Optional dependencies (defined in ``extras_require``)
     - scikit-image
 
-    # Temporary: the scikit-image conda package is missing the dask dependency
-    # so we add it here for now
-    - dask
-
 test:
   requires:
     - pip
+    - pytest
   imports:
     - glue
     - glue.core
   commands:
     - pip check
     - glue --version
+    - pytest --pyargs glue
 
 about:
   home: http://glueviz.org
