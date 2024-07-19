@@ -1,5 +1,5 @@
 {% set name = "glue-core" %}
-{% set version = "1.21.0" %}
+{% set version = "1.21.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/glue_core-{{ version }}.tar.gz
-  sha256: d730bcd483eadf58cb566199a2012a95714075fb522077a1ea0420ef388cd45b
+  sha256: b66e73fcdcf78e159ec686b13a7c8f1b4542e5cab46416aa5f1a1cdd4c42baf6
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -37,7 +37,6 @@ requirements:
     - xlrd >=1.2
     - openpyxl >=3.0
     - mpl-scatter-density >=0.7
-    - pvextractor >=0.2
     - importlib-resources >=1.3
     - importlib-metadata >=3.6
     - shapely >=2.0
