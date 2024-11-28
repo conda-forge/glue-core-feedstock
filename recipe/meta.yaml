@@ -12,7 +12,7 @@ source:
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   noarch: python
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -28,7 +28,7 @@ requirements:
     - scipy >=1.1
     - pandas >=1.2
     - echo >=0.6
-    - astropy >=4.0
+    - astropy-base >=4.0
     - fast-histogram >=0.12
     - setuptools >=30.3.0
     - ipython >=4.0
