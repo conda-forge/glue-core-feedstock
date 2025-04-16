@@ -1,18 +1,18 @@
 {% set name = "glue-core" %}
-{% set version = "1.21.1" %}
+{% set version = "1.22.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/glue_core-{{ version }}.tar.gz
-  sha256: b66e73fcdcf78e159ec686b13a7c8f1b4542e5cab46416aa5f1a1cdd4c42baf6
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/glue_core-{{ version }}.tar.gz
+  sha256: c36e5b5d73bcb28080afe8a98128affb0cd00ac1f3aa025ba76aec96c3113cdf
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   noarch: python
-  number: 1
+  number: 0
 
 requirements:
   host:
