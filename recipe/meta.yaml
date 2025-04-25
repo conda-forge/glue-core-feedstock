@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "glue-core" %}
 {% set version = "1.22.1" %}
 
@@ -12,17 +13,17 @@ source:
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   noarch: python
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - setuptools
     - setuptools-scm
     - wheel
     - pip
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - numpy >=1.17
     - matplotlib-base >=3.2
     - scipy >=1.1
@@ -47,6 +48,7 @@ test:
   requires:
     - pip
     - pytest
+    - python {{ python_min }}
   imports:
     - glue
     - glue.core
