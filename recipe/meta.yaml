@@ -28,7 +28,7 @@ requirements:
     - matplotlib-base >=3.2
     - scipy >=1.1
     - pandas >=1.2
-    - echo >=0.6
+    - echo >=0.12
     - astropy-base >=4.0
     - fast-histogram >=0.12
     - ipython >=4.0
