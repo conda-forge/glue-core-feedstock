@@ -1,6 +1,6 @@
 {% set python_min = "3.10" %}
 {% set name = "glue-core" %}
-{% set version = "1.26.0" %}
+{% set version = "1.27.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/glue_core-{{ version }}.tar.gz
-  sha256: 7fe30914eab5bbd68b072e3eab5886208f84b36dc87cb5246762079e2ec0abd8
+  sha256: df5f0c2acf8c4f9190ad85ab75d8899e5e6e7f5092f8bdd1c7198b7401c6c4c3
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
